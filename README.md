@@ -4,6 +4,7 @@
 
 📄 **Accepted at IEEE [Conference Name] 2026** — camera-ready included in [`paper/`](./paper) for reference. Presentation and formal IEEE Xplore publication still pending.
 
+[![CI](https://github.com/niketkrishnan/render-aware-prompt-injection-defence/actions/workflows/ci.yml/badge.svg)](https://github.com/niketkrishnan/render-aware-prompt-injection-defence/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
@@ -58,6 +59,13 @@ File Reputation           Render-Aware Detector         Semantic Classifier
 - **Layer 2 — Render-aware detector**: extracts per-span font size, colour, and bounding-box metadata via PyMuPDF; flags tiny fonts, white/near-white text, low-contrast text, and off-page placement.
 - **Layer 3 — Semantic classifier**: DistilBERT fine-tuned on 100k HackAPrompt samples.
 - **Fusion**: XGBoost combines all 9 features into a single calibrated risk score, with SHAP for explainability.
+
+## Key engineering decisions
+
+- **XGBoost fusion over a weighted average.** Each layer's signal is only meaningful within its own threat class (semantic score for text injection, hidden_score for formatting concealment, vt_score for known malware) — a linear blend would dilute a strong single-layer signal with two near-zero ones. A tree-based fusion model lets each layer fire independently without being averaged down; SHAP confirms this modality-specific complementarity (Table V in the paper).
+- **DistilBERT over full BERT for Layer 3.** The 2,000 ms end-to-end latency target is dominated by the VirusTotal API round-trip (~768 ms), leaving a tight budget for local inference. DistilBERT gives ~97% of BERT's accuracy at roughly half the parameters, which keeps Layer 3 under 40 ms per document instead of contending for the remaining latency budget.
+- **Raw content-stream parsing instead of `get_text()` for off-page detection.** PyMuPDF's `get_text()` silently clips spans positioned outside the visible viewport — exactly the injection technique it needed to catch. Off-page detection required dropping to raw PDF content-stream coordinate parsing (see `notebooks/dev_offpage_detection_exploration.ipynb` for the debugging trail).
+- **Fixed colour-threshold indicators over a continuous luminance metric — a known limitation.** The shipped detector flags specific near-white/low-contrast hex values rather than computing perceptual luminance (`L = 0.299R + 0.587G + 0.114B`), so a novel off-list colour could evade it. This is called out explicitly in the paper as a direction for follow-up work rather than silently left as a gap.
 
 ## Repo layout
 
