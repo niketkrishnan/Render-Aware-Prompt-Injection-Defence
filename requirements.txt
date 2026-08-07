@@ -1,0 +1,12 @@
+torch>=2.0
+transformers>=4.40
+xgboost>=2.0
+scikit-learn>=1.4
+pandas>=2.0
+numpy>=1.26
+shap>=0.45
+matplotlib>=3.8
+reportlab>=4.4
+pymupdf>=1.27
+requests>=2.32
+python-dotenv>=1.0
