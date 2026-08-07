@@ -2,7 +2,7 @@
 
 **A 4-layer hybrid detection framework for catching prompt-injection attacks hidden in PDFs before they reach an LLM/RAG pipeline — including attacks invisible to human reviewers but fully machine-extractable (zero-point fonts, white-on-white text, off-page placement).**
 
-📄 **Accepted at IEEE [Conference Name] 2026** — camera-ready included in [`paper/`](./paper). Presentation pending; full publication link to follow.
+📄 **Accepted at IEEE [Conference Name] 2026** — camera-ready included in [`paper/`](./paper) for reference. Presentation and formal IEEE Xplore publication still pending.
 
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
@@ -92,21 +92,12 @@ python -m src.pipeline --file path/to/document.pdf
 
 Built from three sources (11,050 samples total): [HackAPrompt](https://arxiv.org/abs/2311.16119) (10,000 text injections), 1,000 synthetically obfuscated PDFs across 6 render-obfuscation techniques, and ~50 VirusTotal-verified malware hashes. Raw data is not redistributed here (HackAPrompt license, malware hashes); `data/README.md` documents exactly how to reconstruct it.
 
-## Citation
-
-```bibtex
-@inproceedings{nasar2026beyondtext,
-  title     = {Beyond Text: A Render-Aware, Semantically-Fused Defence Against Indirect Prompt Injection in Enterprise RAG Pipelines},
-  author    = {Nasar, Abu and Krishnan, Niket and Rajeev, Devi and Kani Kolil, Vysakh},
-  booktitle = {Proceedings of IEEE [Conference Name]},
-  year      = {2026}
-}
-```
-
 ## Authors
 
 Abu Nasar, Niket Krishnan, Devi Rajeev, Vysakh Kani Kolil — Center for Cybersecurity Systems and Networks, Amrita Vishwa Vidyapeetham, Amritapuri, India.
 
-## License
+## License & paper status
 
-MIT — see [LICENSE](./LICENSE). Paper content/figures © the authors; code is MIT.
+This paper is accepted and pending IEEE publication (copyright transfer to IEEE applies to the manuscript once published — the camera-ready PDF in [`paper/`](./paper) is shared here for reference ahead of that, not for redistribution). A formal citation (DOI/BibTeX) will be added once the paper is indexed by IEEE Xplore.
+
+The **code** in this repository is separate from the paper's copyright and is licensed under MIT — see [LICENSE](./LICENSE).
