@@ -8,11 +8,14 @@ Run with: pytest tests/
 """
 
 import os
+import sys
 import tempfile
+from pathlib import Path
 
 from reportlab.lib.colors import HexColor
 from reportlab.pdfgen import canvas
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from src.layer2_render_aware import extract_render_features
 
 
