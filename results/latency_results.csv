@@ -1,0 +1,6 @@
+Component,Mean (ms),Std (ms)
+Layer 1 (VirusTotal),768.22,19.72
+Layer 2 (Render-Aware),32.27,4.21
+Layer 3 (DistilBERT),36.46,53.35
+Fusion (XGBoost),0.4587,0.3717
+Total,837.41,—

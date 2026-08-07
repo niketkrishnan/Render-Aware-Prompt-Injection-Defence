@@ -1,0 +1,9 @@
+Method,F1 (Macro),Accuracy,Std (F1)
+Keyword Rules (Baseline),0.5985,0.5986,—
+Semantic Only - DistilBERT,0.8786,0.8788,—
+Render-Aware Only,0.3707,0.5152,—
+VirusTotal Only,0.3383,0.5000,—
+Logistic Regression,0.9023,0.9025,—
+Random Forest,0.8693,0.8693,—
+XGBoost Fusion (Ours),0.9109,0.9110,—
+XGBoost Fusion 10-Fold CV,0.9139,0.9140,±0.0119
