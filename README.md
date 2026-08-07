@@ -2,7 +2,7 @@
 
 **A 4-layer hybrid detection framework for catching prompt-injection attacks hidden in PDFs before they reach an LLM/RAG pipeline — including attacks invisible to human reviewers but fully machine-extractable (zero-point fonts, white-on-white text, off-page placement).**
 
-📄 **Accepted at IEEE [Conference Name] 2026** — camera-ready included in [`paper/`](./paper) for reference. Presentation and formal IEEE Xplore publication still pending.
+📄 **Accepted at IEEE ICIMIA 2026** — camera-ready included in [`paper/`](./paper) for reference. Presentation and formal IEEE Xplore publication still pending.
 
 [![CI](https://github.com/niketkrishnan/render-aware-prompt-injection-defence/actions/workflows/ci.yml/badge.svg)](https://github.com/niketkrishnan/render-aware-prompt-injection-defence/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
