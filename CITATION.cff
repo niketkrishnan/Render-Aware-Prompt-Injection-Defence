@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+title: "Beyond Text: Render-Aware, Semantically-Fused Defence Against Indirect Prompt Injection"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: Nasar
+    given-names: Abu
+  - family-names: Krishnan
+    given-names: Niket
+  - family-names: Rajeev
+    given-names: Devi
+  - family-names: Kolil
+    given-names: Vysakh Kani
+repository-code: "https://github.com/niketkrishnan/Render-Aware-Prompt-Injection-Defence"
+license: MIT
+version: 1.0.0
+date-released: 2026-10-29
