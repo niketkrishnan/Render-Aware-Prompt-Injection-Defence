@@ -7,6 +7,7 @@
 [![CI](https://github.com/niketkrishnan/render-aware-prompt-injection-defence/actions/workflows/ci.yml/badge.svg)](https://github.com/niketkrishnan/render-aware-prompt-injection-defence/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23755371.svg)](https://doi.org/10.5281/zenodo.23755370)
 
 ---
 
@@ -107,4 +108,4 @@ Abu Nasar, Niket Krishnan, Devi Rajeev, Vysakh Kani Kolil — Center for Cyberse
 
 The paper is published at IEEE ICIMIA 2026. Copyright in the paper belongs to IEEE and it is not redistributed here. A formal citation (DOI/BibTeX) will be added once the paper is indexed on IEEE Xplore.
 
-The **code** in this repository is separate from the paper's copyright and is licensed under MIT — see [LICENSE](./LICENSE).
+Code archive: https://doi.org/10.5281/zenodo.23755370. The paper's own DOI/BibTeX will be added once it is indexed on IEEE Xplore.
