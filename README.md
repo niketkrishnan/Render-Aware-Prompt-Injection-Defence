@@ -2,7 +2,7 @@
 
 **A 4-layer hybrid detection framework for catching prompt-injection attacks hidden in PDFs before they reach an LLM/RAG pipeline — including attacks invisible to human reviewers but fully machine-extractable (zero-point fonts, white-on-white text, off-page placement).**
 
-📄 **Accepted at IEEE ICIMIA 2026** — camera-ready included in [`paper/`](./paper) for reference. Presentation and formal IEEE Xplore publication still pending.
+     📄 **Published at IEEE ICIMIA 2026.** The paper is © IEEE; see the IEEE Xplore page for the official version (link/DOI to be added).
 
 [![CI](https://github.com/niketkrishnan/render-aware-prompt-injection-defence/actions/workflows/ci.yml/badge.svg)](https://github.com/niketkrishnan/render-aware-prompt-injection-defence/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
@@ -80,7 +80,6 @@ File Reputation           Render-Aware Detector         Semantic Classifier
 ├── data/                 # dataset construction notes (raw data not included — see below)
 ├── results/              # metrics, SHAP plots, latency charts from the paper
 ├── tests/                # unit tests for the render-aware detector
-├── paper/                # camera-ready PDF
 └── requirements.txt
 ```
 
@@ -106,6 +105,6 @@ Abu Nasar, Niket Krishnan, Devi Rajeev, Vysakh Kani Kolil — Center for Cyberse
 
 ## License & paper status
 
-This paper is accepted and pending IEEE publication (copyright transfer to IEEE applies to the manuscript once published — the camera-ready PDF in [`paper/`](./paper) is shared here for reference ahead of that, not for redistribution). A formal citation (DOI/BibTeX) will be added once the paper is indexed by IEEE Xplore.
+     The paper is published at IEEE ICIMIA 2026. Copyright in the paper belongs to IEEE and it is not redistributed here. A formal citation (DOI/BibTeX) will be added once the paper is indexed on IEEE Xplore.
 
 The **code** in this repository is separate from the paper's copyright and is licensed under MIT — see [LICENSE](./LICENSE).
